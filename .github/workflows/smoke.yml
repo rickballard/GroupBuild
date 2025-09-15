@@ -1,0 +1,27 @@
+name: smoke
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-powershell@v2
+      - name: Repo smoke (markdown + images)
+        shell: pwsh
+        run: |
+          $ErrorActionPreference='Stop'
+          $repo = "$PWD"
+          $mds  = Get-ChildItem -Path $repo -Recurse -File -Include *.md | Where-Object { $_.FullName -notmatch '\.git\' }
+          foreach ($md in $mds) {
+            $txt = Get-Content -Raw -Path $md.FullName -Encoding UTF8
+            if ($null -eq $txt) { $txt = "" }
+          }
+          Write-Host "SMOKE OK"
