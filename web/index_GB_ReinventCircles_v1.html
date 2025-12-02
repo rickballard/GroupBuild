@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GroupBuild — Reinvent yourself together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="GroupBuild hosts small circles where people navigating AI-driven change support each other, use AI tools together, and turn anxiety into action.">
+    <style>
+        body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; background: #f9fafb; }
+        header { padding: 2.5rem 1.5rem 1.5rem; background: white; border-bottom: 1px solid #e5e7eb; position: sticky; top: 0; z-index: 10; }
+        .container { max-width: 960px; margin: 0 auto; }
+        .brand { font-weight: 700; letter-spacing: 0.03em; font-size: 1.1rem; text-transform: uppercase; }
+        nav a { margin-left: 1.5rem; text-decoration: none; color: #4b5563; font-size: 0.95rem; }
+        nav a:hover { color: #111827; }
+        .hero { padding: 3rem 1.5rem 3.5rem; background: linear-gradient(135deg, #eef2ff, #eff6ff); border-bottom: 1px solid #e5e7eb; }
+        .hero-title { font-size: 2.4rem; line-height: 1.1; margin-bottom: 1rem; }
+        .hero-sub { font-size: 1.05rem; color: #4b5563; max-width: 40rem; margin-bottom: 1.75rem; }
+        .buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .btn-primary, .btn-secondary { border-radius: 999px; padding: 0.7rem 1.4rem; font-size: 0.95rem; border: 1px solid transparent; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; }
+        .btn-primary { background: #111827; color: white; }
+        .btn-primary:hover { background: #000000; }
+        .btn-secondary { background: white; color: #111827; border-color: #d1d5db; }
+        .btn-secondary:hover { background: #f3f4f6; }
+        section { padding: 3rem 1.5rem; }
+        section:nth-of-type(even) { background: #f9fafb; }
+        h2 { font-size: 1.5rem; margin-bottom: 1.25rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+        .card { background: white; border-radius: 0.75rem; padding: 1.25rem 1.35rem; border: 1px solid #e5e7eb; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.03); }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+        .badge { display: inline-block; padding: 0.1rem 0.55rem; border-radius: 999px; font-size: 0.75rem; border: 1px solid #d1d5db; color: #4b5563; margin-left: 0.5rem; }
+        .step-list { display: grid; gap: 1rem; }
+        .step { background: white; border-radius: 0.75rem; padding: 1rem 1.1rem; border: 1px dashed #d1d5db; }
+        .step-title { font-weight: 600; margin-bottom: 0.25rem; }
+        .muted { color: #6b7280; font-size: 0.9rem; }
+        .cols-2 { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 2fr); gap: 2rem; align-items: start; }
+        footer { padding: 2rem 1.5rem; border-top: 1px solid #e5e7eb; font-size: 0.85rem; color: #6b7280; background: white; }
+        @media (max-width: 768px) {
+            header { padding: 1.25rem 1rem; position: static; }
+            .hero { padding: 2.25rem 1rem; }
+            section { padding: 2.25rem 1rem; }
+            nav { margin-top: 0.75rem; }
+            nav a { margin-left: 0; margin-right: 1rem; display: inline-block; margin-top: 0.35rem; }
+            .cols-2 { grid-template-columns: minmax(0, 1fr); }
+            .hero-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+            <div class="brand">GroupBuild</div>
+            <nav>
+                <a href="#who">Who it's for</a>
+                <a href="#how">How it works</a>
+                <a href="#tracks">Tracks</a>
+                <a href="#about">About</a>
+                <a href="#involved">Get involved</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">Reinvent yourself together.</h1>
+                <p class="hero-sub">
+                    GroupBuild hosts small circles where people navigating AI-driven change support each other,
+                    use AI tools together, and turn anxiety into action.
+                </p>
+                <div class="buttons">
+                    <a class="btn-primary" href="#intake">Tell us what you are navigating</a>
+                    <a class="btn-secondary" href="#how">How GroupBuild circles work</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="who">
+            <div class="container">
+                <h2>Who GroupBuild is for</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Workers in transition</h3>
+                        <p class="muted">
+                            Your job is changing or disappearing. You want to explore options and next steps without doing it alone.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Community leads</h3>
+                        <p class="muted">
+                            You host a Discord, meetup, or online community and want a simple way to run AI-era reinvention circles for your people.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Funders &amp; sponsors</h3>
+                        <p class="muted">
+                            You are looking for grounded, human-centered ways to help people adapt to AI without hype or denial.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how">
+            <div class="container">
+                <h2>What happens in a GroupBuild circle</h2>
+                <div class="step-list">
+                    <div class="step">
+                        <div class="step-title">1. Clarify your pivot</div>
+                        <p class="muted">
+                            You arrive with a fuzzy worry ("I think my job is at risk") and leave the first sessions with a clearer direction to explore.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="step-title">2. Explore options with AI</div>
+                        <p class="muted">
+                            Together, you and your circle use AI tools to map skills, search adjacent roles, and surface realistic stepping stones.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="step-title">3. Commit to small experiments</div>
+                        <p class="muted">
+                            Each week you choose one or two concrete experiments. The circle keeps you honest and celebrates progress.
+                        </p>
+                    </div>
+                    <div class="step">
+                        <div class="step-title">4. Track your journey</div>
+                        <p class="muted">
+                            Light-weight notes and check-ins help you see how far you have come. You can keep this private or share parts of it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracks">
+            <div class="container">
+                <h2>Circles tuned to different journeys</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Reinvent Work <span class="badge">Now recruiting</span></h3>
+                        <p class="muted">
+                            For individuals working through AI-driven changes in their roles, industries, or identities.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Build a Cause <span class="badge">Planned</span></h3>
+                        <p class="muted">
+                            For small groups that want to design campaigns, mutual aid projects, or other collective efforts.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Ship a Side Project <span class="badge">Planned</span></h3>
+                        <p class="muted">
+                            For people who want to move a project from idea to first users, together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container cols-2">
+                <div>
+                    <h2>Why circles, not just tools</h2>
+                    <p class="muted">
+                        Most people do not need another app or article. They need peers who show up regularly.
+                    </p>
+                    <p class="muted">
+                        Circles are small enough for trust and large enough for diverse perspectives. AI tools become easier to use well when you see how others are using them, not just when you experiment alone.
+                    </p>
+                    <p class="muted">
+                        GroupBuild circles combine structure, tools, and mutual support into something people can stick with.
+                    </p>
+                </div>
+                <div>
+                    <h2>How participation works</h2>
+                    <p class="muted">
+                        GroupBuild will start with small pilot circles.
+                    </p>
+                    <ul class="muted">
+                        <li>Sliding-scale contributions for individuals.</li>
+                        <li>Sponsored seats funded by employers, unions, or foundations.</li>
+                        <li>No one turned away from early pilots for lack of funds.</li>
+                    </ul>
+                    <p class="muted">
+                        We are in an exploration phase: testing what works, learning from participants, and sharing patterns others can reuse.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container cols-2">
+                <div>
+                    <h2>Who is behind GroupBuild</h2>
+                    <p class="muted">
+                        GroupBuild was started by people who have spent years building companies, working with organizations, and thinking about how AI reshapes work and civic life.
+                    </p>
+                    <p class="muted">
+                        We are not a hype-driven startup promising overnight transformation and we are not a political party. We are a small team experimenting with ways to help people move through this transition with more dignity and agency.
+                    </p>
+                </div>
+                <div>
+                    <h2>Shape the next phase</h2>
+                    <p class="muted">
+                        If you bring experience in facilitation, community building, worker advocacy, or research on AI and labor, we would like to hear from you.
+                    </p>
+                    <p class="muted">
+                        Use the form below to share what you are navigating or what you would like to build with us.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="involved">
+            <div class="container">
+                <h2>Get involved</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Join a circle</h3>
+                        <p class="muted">
+                            Tell us how AI is affecting your work or plans. We will use early intakes to design the first circles.
+                        </p>
+                        <a class="btn-secondary" href="#intake">Share your situation</a>
+                    </div>
+                    <div class="card">
+                        <h3>Host a circle</h3>
+                        <p class="muted">
+                            If you already run a community or have facilitation experience, you can help host early circles.
+                        </p>
+                        <a class="btn-secondary" href="#intake">Express interest</a>
+                    </div>
+                    <div class="card">
+                        <h3>Sponsor circles</h3>
+                        <p class="muted">
+                            Organizations can fund seats for people most impacted by AI. Early sponsors help shape where we focus.
+                        </p>
+                        <a class="btn-secondary" href="#intake">Discuss sponsorship</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="intake">
+            <div class="container cols-2">
+                <div>
+                    <h2>Early interest form</h2>
+                    <p class="muted">
+                        This can be implemented with any simple form service. The key fields:
+                    </p>
+                    <ul class="muted">
+                        <li>Name or pseudonym</li>
+                        <li>Email or contact channel</li>
+                        <li>How AI is affecting your work or plans</li>
+                        <li>What you hope a circle would help you do</li>
+                        <li>Whether you want to join, host, or sponsor (or more than one)</li>
+                    </ul>
+                    <p class="muted">
+                        For now, you can connect this to a basic mailing list or CRM and process responses manually.
+                    </p>
+                </div>
+                <div>
+                    <div class="card">
+                        <h3>Placeholder form</h3>
+                        <p class="muted">
+                            Replace this card with an embedded form or a link to your preferred form tool.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>GroupBuild — small circles for big pivots.</div>
+            <div style="margin-top:0.25rem;">Last updated: PLACEHOLDER_DATE</div>
+        </div>
+    </footer>
+</body>
+</html>
