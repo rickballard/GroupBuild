@@ -257,3 +257,89 @@ Later waves can deepen:
   - generate wireframes based on this spec,
   - produce React/Tailwind implementations,
   - attach cometatrain metadata for asset self-voice.
+
+
+## 10. Membership, payment signals, and pay it forward schema
+
+This front door should support a **provisional membership** pattern that treats
+pricing as a **value vote**, not as a paywall.
+
+### 10.1 Provisional membership flow
+
+For commercially aimed lanes (and future commercial variants):
+
+1. Visitor chooses a "Join as provisional member" path.
+2. They see a simple control to answer:
+
+   > "If this service ever charged per month, what would feel fair to you?"
+
+   Example tiers:
+   - 5, 10, 25, 50 (local currency equivalents)
+   - "other amount"
+   - "I cannot pay but I want this to exist"
+
+3. Clear disclosure appears directly under the control:
+
+   - "There is no charge today."
+   - "Your answer is anonymous and acts as a vote of support."
+   - "You receive provisional access either way."
+
+4. After submit:
+
+   - Provisional membership is granted.
+   - A transparency panel shows:
+     - aggregated, anonymized statistics (histogram of what others selected),
+     - a short explanation of why GroupBuild uses this pattern,
+     - a link to a pricing and sustainability note in the CoCivium ethics stack.
+
+The goal is to **measure perceived value** and **goodwill**, not to trick anyone
+into thinking payment is required.
+
+### 10.2 Ethical constraints
+
+- No stored payment instruments are collected in this flow.
+- Historical "what would you pay" answers are never treated as consent to charge.
+- The interface must avoid dark patterns:
+
+  - the free nature of the current service is stated plainly,
+  - the experiment framing is explicit,
+  - withdrawal and account deletion remain simple.
+
+Exclusion or membership removal remains a **boundary setting tool** used to
+protect others, not a public punishment rail.
+
+### 10.3 Signals and data model
+
+The system may capture:
+
+- `user_price_vote` (numeric or banded),
+- optional `ability_to_pay_band`,
+- optional `reason_for_vote` as tagged choices or free text,
+- timestamp and membership context.
+
+These are used to:
+
+- understand perceived value across user segments,
+- inform when future paid tiers might be required for sustainability,
+- design contribution options (time, expertise, money).
+
+### 10.4 CoPortal and CoGbx representation
+
+The AI facing CoPortal and CoGbx records should expose business model metadata
+such as:
+
+- `business_model: pay_it_forward_experiment`
+- `current_price: 0`
+- `price_vote_enabled: true`
+- a description of membership tiers (`guest`, `provisional`, `full`, `steward`)
+- a reference to the relevant CoCivium pricing ethics note.
+
+This lets AIs explain the pattern to users:
+
+- that they are not being charged,
+- that their answer is a vote of support,
+- that the ecosystem prefers "free by default, funded when necessary" as a
+  long term norm for human facing services where feasible.
+
+This schema is intended to be reusable across InSeed.com, CoPolitic.org, and
+other CoSuite services that want a common pay it forward baseline.
